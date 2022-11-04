@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_categories
 
   # GET /posts or /posts.json
   def index
@@ -65,6 +66,11 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title)
+      params.require(:post).permit(:title, :category_id)
     end
+
+    def set_categories
+      @categories = Category.all.order(:name)
+    end
+    
 end
