@@ -3,6 +3,7 @@ class Post < ApplicationRecord
     belongs_to :category
     has_rich_text :content
     has_one_attached :image, :dependent => :destroy
+    belongs_to :user
 
 #     private
 
