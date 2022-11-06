@@ -16,6 +16,7 @@
 				<div>
 					<p class="font-semibold text-gray-200 text-sm"> User Name </p>
 					<p class="font-semibold text-gray-400 text-xs"> <%= @post.created_at %> </p>
+					<p class="mt-1 text-sm text-gray-400 dark:text-gray-400"> <%= pluralize(@post.views, "views") %> </p>
 				</div>
 			</div>
 		</div>
