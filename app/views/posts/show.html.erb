@@ -24,7 +24,19 @@
 	</div>
 	<div class="px-4 lg:px-0 mt-12 text-gray-700 dark:text-white max-w-screen-md mx-auto text-lg leading-relaxed">
 		<p class="pb-6"> <%= @post.content %> </p>
-		<%= link_to 'Edit', edit_post_path(@post), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-		<%= button_to 'Delete', post_path(@post), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-		<%= link_to 'Back', posts_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
 	</div>
+	<div class="p-10">
+		<%= render '/layouts/cta'%>
+	</div>
+	<div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+		<div class="inline-flex rounded-md shadow">
+			<%= button_to 'Delete', post_path(@post), method: :delete, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700" %>
+		</div>
+		<div class="ml-3 inline-flex rounded-md shadow">
+			<%= link_to 'Edit', edit_post_path(@post), class: "inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50" %>
+		</div>
+		<div class="ml-3 inline-flex rounded-md shadow">
+			<%= link_to 'Back', posts_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50" %>
+		</div>
+	</div>
+</div>
