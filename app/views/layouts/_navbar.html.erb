@@ -22,7 +22,7 @@
 					<a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Manage Blog Posts</a>
 				</nav>
 				<div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-					<%= current_user.email %>
+					<h6 class="text-base font-medium text-gray-500 hover:text-gray-900"> Hi, <%= current_user.name %> </h6>
 					<%= button_to "Sign out", destroy_user_session_path, method: :delete, data: {turbo: false}, class:"ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700" %>
 				<% else %>
 					<%= link_to "Sign in", new_user_session_path, data: {turbo_method: :get},class: "whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"%>
