@@ -14,7 +14,7 @@
 				<img src="https://randomuser.me/api/portraits/men/97.jpg"
         class="h-10 w-10 rounded-full mr-2 object-cover" />
 				<div>
-					<p class="font-semibold text-gray-200 text-sm"> User Name </p>
+					<p class="font-semibold text-gray-200 text-sm"> <%= @post.user.email %> </p>
 					<p class="font-semibold text-gray-400 text-xs"> <%= @post.created_at %> </p>
 					<p class="mt-1 text-sm text-gray-400 dark:text-gray-400"> <%= pluralize(@post.views, "views") %> </p>
 				</div>

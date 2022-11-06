@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Category.create(name: "Full Stack")
-Category.create(name: "Front End")
-Category.create(name: "Framework")
+# Category.create(name: "Full Stack")
+# Category.create(name: "Front End")
+# Category.create(name: "Framework")
+
+User.create(email: "oaedward83@gmail.com", password: "password", password_confirmation: "password")
+
+# Post.create(title: "Post 1", category_id: Category.first.id, cov)
