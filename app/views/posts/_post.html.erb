@@ -6,8 +6,8 @@
 		<div class="mt-4 flex justify-between">
 			<div>
 				<%= link_to post.title, post, class: "text-gray-700 dark:text-white text-sm font-bold hover:underline cursor-pointer" %>
-				<p class="mt-1 text-sm text-gray-500 dark:text-gray-400"> <%= post.created_at %> </p>
-				<p class="mt-1 text-sm text-gray-500 dark:text-gray-400"> <%= pluralize(post.views, "views") %> </p>
+				<p class="mt-1 text-sm text-gray-500 dark:text-gray-400"> <%= post.created_at.strftime("%d %b %Y") %> | <%= link_to post.user.name, user_path(post.user), class: "dark:hover:text-gray-50" %> </p>
+				<p class="mt-1 font-semibold text-xs text-gray-500 dark:text-gray-400"> <%= pluralize(post.views, "views") %> </p>
 			</div>
 		</div>
 	</div>
