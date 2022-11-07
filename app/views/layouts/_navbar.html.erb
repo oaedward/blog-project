@@ -1,4 +1,4 @@
-<div class="sticky top-0 dark:bg-gray-900 shadow-md dark:shadow-lg z-50">
+<div class="sticky top-0 bg-gray-50 dark:bg-gray-900 shadow-md dark:shadow-lg z-50">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6">
 		<div class="flex items-center justify-between py-6 md:justify-start md:space-x-10">
 			<div class="flex justify-start lg:w-0 lg:flex-1 ">
@@ -22,7 +22,7 @@
 					<a href="#" class="text-gray-500 dark:text-gray-50 bg-transparent group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 dark:hover:text-gray-500">Manage Blog Posts</a>
 				</nav>
 				<div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-					<h6 class="text-base font-medium text-gray-500 dark:text-gray-50 dark:hover:text-gray-500 hover:text-gray-900 cursor-pointer"> Hi, <%= current_user.name %> </h6>
+					<h6 class="text-base font-medium text-gray-500 dark:text-gray-50 dark:hover:text-gray-500 hover:text-gray-900 cursor-pointer"> Hi, <%= link_to current_user.name, user_path(current_user.id) %> </h6>
 					<%= button_to "Sign out", destroy_user_session_path, method: :delete, data: {turbo: false}, class:"ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700" %>
 				<% else %>
 					<%= link_to "Sign in", new_user_session_path, data: {turbo_method: :get},class: "whitespace-nowrap text-base font-medium text-gray-500 dark:text-gray-50 dark:hover:text-gray-500 hover:text-gray-900 cursor-pointer"%>
