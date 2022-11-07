@@ -1,8 +1,8 @@
-<div class="sticky top-0 bg-gray-50 dark:bg-gray-900 shadow-md dark:shadow-lg z-50">
+<div class="sticky top-0 dark:bg-gray-900 shadow-md dark:shadow-lg z-50">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6">
 		<div class="flex items-center justify-between py-6 md:justify-start md:space-x-10">
-			<div class="flex justify-start lg:w-0 lg:flex-1 bg-transparent">
-				<%= link_to "Blog'22", root_path, class:"font-bold text-lg cursor-pointer dark:bg-gray-50" %>
+			<div class="flex justify-start lg:w-0 lg:flex-1 ">
+				<%= link_to "Blog'22", root_path, class:"font-bold text-lg cursor-pointer dark:text-gray-50" %>
 			</div>
 			<div class="-my-2 -mr-2 md:hidden">
 				<button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
@@ -17,7 +17,7 @@
 				<nav class="hidden space-x-10 md:flex">
 					<div class="relative">
 						<!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-						<%= button_to "Create Post", new_post_path, method: :get, data: {turbo: false}, class:"text-gray-500 dark:text-gray-50 bg-transparent group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 dark:hover:text-gray-500" %>
+						<%= button_to "Create Post", new_post_path, method: :get, data: {turbo: false}, class:"text-gray-500 dark:text-gray-50 bg-transparent group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 dark:hover:text-gray-500" %>
 					</div>
 					<a href="#" class="text-gray-500 dark:text-gray-50 bg-transparent group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 dark:hover:text-gray-500">Manage Blog Posts</a>
 				</nav>
