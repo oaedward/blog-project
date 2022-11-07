@@ -22,6 +22,11 @@
 			<div class="mb-3 text-xl font-bold dark:text-gray-900"><%= post.title %></div>
 			<div class="text-sm text-neutral-600"><%= comment.body %></div>
 		</div>
+		<% if current_user == comment.user %>
+			<div id="edit-form-<%= comment.id %>" class="">
+				<%= render '/comments/form', post: @post, comment: comment  %>
+			</div>
+		<% end %>
 		<div>
 			<div class="flex items-center justify-between text-slate-500">
 				<div class="flex space-x-4 md:space-x-8">

@@ -1,5 +1,5 @@
 <div class="px-4 lg:px-0 mt-12 text-gray-700 dark:text-white max-w-screen-md mx-auto text-lg leading-relaxed">
-	<%= form_with(model: [@post, @post.comments.build]) do |f| %>
+	<%= form_with(model: [@post, comment]) do |f| %>
 		<div class="w-full rounded-lg pt-2">
 			<div class="flex flex-col mx-0 mb-6">
 				<h2 class="px-4 pt-3 pb-2 text-gray-900 font-bold text-lg">Add a new comment</h2>
