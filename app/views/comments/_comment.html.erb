@@ -10,7 +10,11 @@
 					<span class="rounded-2xl border bg-blue-600 px-3 py-1 text-gray-50 text-xs font-semibold"><%= link_to 'Edit', [post, comment], method: :update%> </span>
 					<span class="rounded-2xl border bg-red-600 px-3 py-1 text-gray-50 text-xs font-semibold"><%= button_to 'Delete', [post, comment], method: :delete%> </span>
 				<% end %>
-				<div class="text-xs text-neutral-500"><%= time_ago_in_words(comment.created_at) %> ago</div>
+				<% if (comment.updated_at - comment.created_at) > 1 %>
+					<div class="text-xs text-neutral-500">Edited <%= time_ago_in_words(comment.updated_at) %> ago</div>
+				<% else %>
+					<div class="text-xs text-neutral-500">Posted <%= time_ago_in_words(comment.created_at) %> ago</div>
+				<% end %>
 			</div>
 		</div>
 		<div class="mt-4 mb-6">
