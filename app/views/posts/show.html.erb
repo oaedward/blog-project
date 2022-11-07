@@ -35,7 +35,7 @@
 			<%= render 'comments/comment', post: @post, comment: comment %>
 		<% end %>
 	</div>
-	<% if current_user %>
+	<% if current_user == @post.user %>
 		<div class="flex lg:mt-0 lg:flex-shrink-0 px-4 lg:px-0 mt-12 text-gray-700 dark:text-white max-w-screen-md mx-auto text-lg leading-relaxed">
 			<div class="inline-flex rounded-md shadow">
 				<%= button_to 'Delete', post_path(@post), method: :delete, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700" %>
