@@ -8,7 +8,13 @@
 			<div class="flex items-center space-x-2">
 				<%# Edit and Delete Buttons %>
 				<% if current_user == comment.user %>
-					<span class="rounded-2xl border bg-blue-600 px-3 py-1 text-gray-50 text-xs font-semibold"><%= link_to 'Edit', nil, remote: true %> </span>
+					<span class="rounded-2xl border bg-blue-600 px-3 py-1 text-gray-50 text-xs font-semibold"><%= link_to 'Edit', nil, remote: true, 
+					data: { 
+						controller: "comments", 
+						action: "comments#toggleForm", 
+						comments_form_param: "edit-form-#{comment.id}",
+						comments_body_param: "comment-body-#{comment.id}" } %>
+					</span>
 					<span class="rounded-2xl border bg-red-600 px-3 py-1 text-gray-50 text-xs font-semibold"><%= button_to 'Delete', [post, comment], method: :delete%> </span>
 				<% end %>
 				<% if (comment.updated_at - comment.created_at) > 1 %>
@@ -20,11 +26,11 @@
 		</div>
 		<div class="mt-4 mb-6">
 			<div class="mb-3 text-xl font-bold dark:text-gray-900"><%= post.title %></div>
-			<div class="text-sm text-neutral-600"><%= comment.body %></div>
+			<div id="comment-body-<%= comment.id %>" class="text-sm text-neutral-600"><%= comment.body %></div>
 		</div>
 		<% if current_user == comment.user %>
-			<div id="edit-form-<%= comment.id %>" class="">
-				<%= render '/comments/form', post: @post, comment: comment  %>
+			<div id="edit-form-<%= comment.id %>" class="hidden">
+				<%= render '/comments/form', post: @post, comment: comment, submit_label: 'Update'  %>
 			</div>
 		<% end %>
 		<div>
