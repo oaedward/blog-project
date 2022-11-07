@@ -5,8 +5,9 @@
 				<div class="h-8 w-8 rounded-full bg-slate-400 bg-[url('https://i.pravatar.cc/32')]"></div>
 				<div class="text-lg font-bold text-slate-700"><%= comment.user.name %></div>
 			</div>
-			<div class="flex items-center space-x-8">
+			<div class="flex items-center space-x-2">
 				<% if current_user == comment.user %>
+					<span class="rounded-2xl border bg-blue-600 px-3 py-1 text-gray-50 text-xs font-semibold"><%= link_to 'Edit', [post, comment], method: :update%> </span>
 					<span class="rounded-2xl border bg-red-600 px-3 py-1 text-gray-50 text-xs font-semibold"><%= button_to 'Delete', [post, comment], method: :delete%> </span>
 				<% end %>
 				<div class="text-xs text-neutral-500"><%= time_ago_in_words(comment.created_at) %> ago</div>
