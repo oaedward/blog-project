@@ -27,6 +27,10 @@
 					<%= f.label :work, class:"sr-only"  %>
 					<%= f.text_field :work, autofocus: true, autocomplete: "work", class:"relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 outline-none focus:z-10 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm mb-3", placeholder:"Your Work?" %>
 				</div>
+				<div class=" rounded-md shadow-sm">
+					<%= f.label :location, class:"sr-only"  %>
+					<%= f.text_field :location, autofocus: true, autocomplete: "location", class:"relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 outline-none focus:z-10 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm mb-3", placeholder:"Your location - City, Country" %>
+				</div>
 				<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
 					<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
 				<% end %>
