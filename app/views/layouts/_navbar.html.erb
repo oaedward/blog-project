@@ -16,10 +16,11 @@
 			<% if current_user %>
 				<nav class="hidden space-x-10 md:flex">
 					<div class="relative">
-						<!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-						<%= button_to "Create Post", new_post_path, method: :get, data: {turbo: false}, class:"text-gray-500 dark:text-gray-50 bg-transparent group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 dark:hover:text-gray-500" %>
+						<%= link_to "Create Post", new_post_path, method: :get, data: {turbo: false}, class:"text-gray-500 dark:text-gray-50 bg-transparent group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 dark:hover:text-gray-500" %>
 					</div>
-					<a href="#" class="text-gray-500 dark:text-gray-50 bg-transparent group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 dark:hover:text-gray-500">Manage Blog Posts</a>
+					<div class="relative">
+						<%= link_to "Create Category", new_category_path, method: :get, data: {turbo: false}, class:"text-gray-500 dark:text-gray-50 bg-transparent group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 dark:hover:text-gray-500" %>
+					</div>
 				</nav>
 				<div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 					<h6 class="text-base font-medium text-gray-500 dark:text-gray-50 dark:hover:text-gray-500 hover:text-gray-900 cursor-pointer"> Hi, <%= link_to current_user.name, user_path(current_user.id) %> </h6>
