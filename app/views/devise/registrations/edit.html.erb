@@ -15,20 +15,24 @@
 				</div>
 				<div class=" rounded-md shadow-sm">
 					<%= f.label :email, class:"sr-only"  %>
-					<%= f.email_field :email, autofocus: true, autocomplete: "email", class:"relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm mb-3", placeholder:"Email address" %>
+					<%= f.email_field :email, autocomplete: "email", class:"relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm mb-3", placeholder:"Email address" %>
 				</div>
 				<div>
 					<%= f.label :bio, class:"sr-only"  %>
 					<div class="mt-1">
-						<%= f.text_area :bio, cols: 30, rows: 10, autofocus: true, autocomplete: "name", class:"relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 outline-none focus:z-10 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm mb-3", placeholder:"Tell us about yourself" %>
+						<%= f.text_area :bio, cols: 30, rows: 10, autocomplete: "name", class:"relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 outline-none focus:z-10 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm mb-3", placeholder:"Tell us about yourself" %>
 					</div>
+				</div>
+				<div class=" rounded-md shadow-sm">
+					<%= f.label :work, class:"sr-only"  %>
+					<%= f.text_field :work, autofocus: true, autocomplete: "work", class:"relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 outline-none focus:z-10 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm mb-3", placeholder:"Your Work?" %>
 				</div>
 				<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
 					<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
 				<% end %>
 				<div class=" rounded-md shadow-sm">
 					<%= f.label :password, class:"sr-only" %>
-					<%= f.password_field :password, autocomplete: "new-password", class:"relative block w-full appearance-none rounded-none px-3 py-2 text-gray-900 placeholder-gray-500 outline-none focus:z-10 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm", placeholder:"Password"  %>
+					<%= f.password_field :password, autocomplete: "new-password", class:"relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm", placeholder:"Password"  %>
 				</div>
 				<% if @minimum_password_length %>
 					<span class="text-xs dark:text-gray-50 text-gray-900">(<%= @minimum_password_length %> characters minimum) - Leave blank if you do not want to change it</span>
