@@ -34,6 +34,7 @@ class PostsController < ApplicationController
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
+        format.html { redirect_to post_url(@post), alert: "Post could not be created!." }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
@@ -47,7 +48,7 @@ class PostsController < ApplicationController
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.html { redirect_to post_url(@post), alert: "Post could not be created!." }
+        format.html { redirect_to post_url(@post), alert: "Post could not be updated!." }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
