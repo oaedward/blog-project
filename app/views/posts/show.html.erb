@@ -23,7 +23,6 @@
 		<%= render '/layouts/cta'%>
 	</div>
 	<div class="px-4 lg:px-0 mt-12 text-gray-700 dark:text-white max-w-screen-md mx-auto text-lg leading-relaxed">
-		<%# Debug Here!!! %>
 		<%= render 'comments/form', post: @post, comment: @post.comments.build, submit_label: "Reply"%>
 		<% @comments.each do |comment| %>
 			<%= render 'comments/comment', post: @post, comment: comment %>
