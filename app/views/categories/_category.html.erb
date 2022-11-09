@@ -1,21 +1,21 @@
 <div id="<%= dom_id category %>">
-	<div class=" bg-gray-100 dark:bg-slate-900 mx-auto flex justify-center items-center">
-		<div class="mb-3 flex w-full max-w-screen-xl transform cursor-pointer flex-col justify-between rounded-md bg-white bg-opacity-75 p-6 text-slate-800 transition duration-500 ease-in-out hover:-translate-y-1 hover:shadow-lg dark:bg-slate-700 dark:bg-opacity-25 dark:text-slate-300 lg:flex-row lg:p-4">
-			<div class="flex w-full flex-row lg:w-3/12">
-				<div class=" self-center overflow-x-hidden">
-					<div class="w-full text-xl font-extrabold leading-5 tracking-tight"><%= category.name %></div>
-					<%# <div class="text-sm text-slate-500">Fayetteville, AR 72701</div> %>
+	<%= link_to category do %>
+		<div class=" bg-gray-100 dark:bg-slate-900 mx-auto flex justify-center items-center">
+			<div class="mb-3 flex w-full max-w-screen-xl transform cursor-pointer flex-col justify-between rounded-md bg-white bg-opacity-75 p-6 text-slate-800 transition duration-500 ease-in-out hover:-translate-y-1 hover:shadow-lg dark:bg-slate-700 dark:bg-opacity-25 dark:text-slate-300 lg:flex-row lg:p-4">
+				<div class="flex w-full flex-row lg:w-3/12">
+					<div class=" self-center overflow-x-hidden">
+						<div class="w-full text-xl font-extrabold leading-5 tracking-tight"><%= category.name %></div>
+					</div>
 				</div>
-			</div>
-			<div class="w-full self-center px-1 pt-4 pb-2 lg:w-1/6 lg:px-0 lg:pt-0 lg:pb-0">
-				<%# <div class="text-base font-bold leading-4 tracking-tight">This is great for short status messages</div> %>
-				<div class="status-bars w-full pt-2">
-					<div class="flex flex-row lg:pr-6">
+				<div class="w-full self-center px-1 pt-4 pb-2 lg:w-1/6 lg:px-0 lg:pt-0 lg:pb-0">
+					<div class="status-bars w-full pt-2">
+						<div class="flex flex-row lg:pr-6">
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	<% end %>
 </div>
 <div class="flex justify-between items-center mb-3">
 	<div>
