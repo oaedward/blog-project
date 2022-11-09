@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
       if @comment.update(comment_params)
         format.html { redirect_to post_url(@post), notice: 'Comment updated successfully' }
       else 
-        format.html { redirect_to post_url(@post), alert: 'Comment could not be updated successfully' }
+        format.html { redirect_to post_url(@post), alert: 'Could not update!' }
       end
     end
   end
